@@ -5,12 +5,18 @@ import br.com.joelbrs.CellphoneServices.model.Client;
 import br.com.joelbrs.CellphoneServices.model.Gadget;
 import br.com.joelbrs.CellphoneServices.model.ServiceItem;
 import br.com.joelbrs.CellphoneServices.model.pk.ServiceItemPK;
+import br.com.joelbrs.CellphoneServices.utils.DateControl;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
 public class ServiceItemDTOOut {
     private ServiceItemPK id = new ServiceItemPK();
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateControl.PATTERN_DATE, timezone = "America/Fortaleza", locale = "pt-BR")
     private LocalDate inclusionDate;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateControl.PATTERN_DATE, timezone = "America/Fortaleza", locale = "pt-BR")
     private LocalDate deliveredDate;
     private Long status;
 

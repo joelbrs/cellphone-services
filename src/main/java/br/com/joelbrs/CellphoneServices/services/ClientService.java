@@ -31,6 +31,10 @@ public class ClientService implements GenericsResource<ClientDTOOut, ClientDTOIn
         return new ClientDTOOut(clientRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id)));
     }
 
+    public ClientDTOOut findByCpf(String cpf) {
+        return new ClientDTOOut(clientRepository.findByCpf(cpf).orElseThrow(() -> new ResourceNotFoundException("Client Not Found")));
+    }
+
     @Override
     public ClientDTOOut insert(ClientDTOIn dto) {
         Client client = new Client();

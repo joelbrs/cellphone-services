@@ -28,6 +28,11 @@ public class ClientController {
         return ResponseEntity.ok().body(clientService.findById(id));
     }
 
+    @GetMapping(value = "/cpf/{cpf}")
+    public ResponseEntity<ClientDTOOut> findByCpf(@PathVariable String cpf) {
+        return ResponseEntity.ok().body(clientService.findByCpf(cpf));
+    }
+
     @PostMapping
     public ResponseEntity<ClientDTOOut> insert(@RequestBody ClientDTOIn dto) {
         return ResponseEntity.ok().body(clientService.insert(dto));
