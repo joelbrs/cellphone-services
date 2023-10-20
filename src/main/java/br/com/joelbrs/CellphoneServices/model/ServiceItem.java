@@ -2,7 +2,6 @@ package br.com.joelbrs.CellphoneServices.model;
 
 import br.com.joelbrs.CellphoneServices.enums.ServiceItemStatus;
 import br.com.joelbrs.CellphoneServices.model.pk.ServiceItemPK;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

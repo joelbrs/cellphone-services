@@ -19,6 +19,16 @@ public class ServiceItemPK implements Serializable {
     @JoinColumn(name = "gadget_id")
     private Gadget gadget;
 
+    private Integer sequenceNumber = 0;
+
+    public ServiceItemPK() {}
+
+    public ServiceItemPK(Client client, Gadget gadget, Integer nextSequenceNumber) {
+        this.client = client;
+        this.gadget = gadget;
+        this.sequenceNumber = nextSequenceNumber;
+    }
+
     public Client getClient() {
         return client;
     }
