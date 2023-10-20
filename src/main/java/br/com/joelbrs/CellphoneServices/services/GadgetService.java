@@ -1,9 +1,7 @@
 package br.com.joelbrs.CellphoneServices.services;
 
-import br.com.joelbrs.CellphoneServices.dtos.ClientDTOOut;
 import br.com.joelbrs.CellphoneServices.dtos.GadgetDTOIn;
 import br.com.joelbrs.CellphoneServices.dtos.GadgetDTOOut;
-import br.com.joelbrs.CellphoneServices.model.Client;
 import br.com.joelbrs.CellphoneServices.model.Gadget;
 import br.com.joelbrs.CellphoneServices.repositories.GadgetRepository;
 import br.com.joelbrs.CellphoneServices.resources.GenericsResource;
