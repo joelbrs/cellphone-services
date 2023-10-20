@@ -8,5 +8,5 @@ public interface GenericsResource<T, K> {
     T findById(Long id);
     T insert(K dto);
     T update(Long id, K dto);
-    T delete(Long id);
+    void delete(Long id);
 }
