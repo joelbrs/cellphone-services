@@ -3,7 +3,9 @@ package br.com.joelbrs.CellphoneServices.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_client")
@@ -14,6 +16,9 @@ public class Client implements Serializable {
     private Long id;
     private String name;
     private String cpf;
+
+    @OneToMany(mappedBy = "id.client")
+    private Set<ServiceItem> services = new HashSet<>();
 
     public Client() {}
 
@@ -45,6 +50,10 @@ public class Client implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Set<ServiceItem> getServices() {
+        return services;
     }
 
     @Override
